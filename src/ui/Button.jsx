@@ -58,7 +58,7 @@ const Button = styled.button`
 `;
 
 Button.defaultProps = {
-  variation: "primary",
+  variation: "primary", // Set a default value
   size: "medium",
 };
 
