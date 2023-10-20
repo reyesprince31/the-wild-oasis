@@ -11,8 +11,6 @@ export async function getCabins() {
 }
 
 export async function createEditCabin(newCabin, id) {
-  console.log("received from app: ", newCabin.image);
-  console.log(id);
   const hasImagePath = newCabin.image?.startsWith?.(supabaseUrl);
 
   const imageName = `${Math.random()}-${newCabin.image.name}`.replaceAll(
@@ -22,9 +20,6 @@ export async function createEditCabin(newCabin, id) {
   const imagePath = hasImagePath
     ? newCabin.image
     : `${supabaseUrl}/storage/v1/object/public/cabin-images/${imageName}`;
-
-  console.log(hasImagePath);
-  console.log("generate new path: ", imagePath);
 
   // 1. Create/edit cabin
   let query = supabase.from("cabins");
