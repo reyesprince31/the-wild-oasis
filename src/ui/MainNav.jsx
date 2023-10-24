@@ -29,16 +29,12 @@ const menuList = [
     name: "Users",
     link: "/users",
   },
-  {
-    svg: <HiOutlineCog6Tooth />,
-    name: "Settings",
-    link: "/settings",
-  },
 ];
 
 const NavList = styled.ul`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 0.8rem;
 `;
 
@@ -93,6 +89,10 @@ function MainNav() {
             </StyledNavLink>
           </li>
         ))}
+        <StyledNavLink to="/settings">
+          <HiOutlineCog6Tooth />
+          <span>Settings</span>
+        </StyledNavLink>
       </NavList>
     </nav>
   );
