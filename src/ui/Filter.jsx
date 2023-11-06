@@ -46,14 +46,18 @@ function Filter({ filterField, options }) {
 
   return (
     <StyledFilter>
-      {options.map((option) => (
-        <FilterButton
-          key={option.value}
-          onClick={() => handleClick(option.value)}
-          active={option.value === currentFilter ? "true" : ""}>
-          {option.label}
-        </FilterButton>
-      ))}
+      {options.map((option) => {
+        const filterValue = option.value === currentFilter;
+        return (
+          <FilterButton
+            key={option.value}
+            onClick={() => handleClick(option.value)}
+            active={filterValue ? "true" : ""}
+            disabled={filterValue}>
+            {option.label}
+          </FilterButton>
+        );
+      })}
     </StyledFilter>
   );
 }
