@@ -30,6 +30,7 @@ export function useBookings() {
   } = useQuery({
     queryKey: ["bookings", filter, sortBy, page],
     queryFn: () => getBookings({ filter, sortBy, page }),
+    retry: false,
   });
 
   //PRE-FETCHING
