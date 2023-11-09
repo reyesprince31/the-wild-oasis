@@ -114,7 +114,7 @@ function BookingDataBox({ booking }) {
     totalPrice,
     hasBreakfast,
     observations,
-    ispaid, // Changed from isPaid to ispaid
+    isPaid,
     guests: { fullName: guestName, email, country, countryFlag, nationalID },
     cabins: { name: cabinName },
   } = booking;
@@ -162,7 +162,7 @@ function BookingDataBox({ booking }) {
           {hasBreakfast ? "Yes" : "No"}
         </DataItem>
 
-        <Price ispaid={ispaid}>
+        <Price ispaid={isPaid ? isPaid.toString() : undefined}>
           <DataItem icon={<HiOutlineCurrencyDollar />} label={`Total price`}>
             {formatCurrency(totalPrice)}
 
@@ -172,7 +172,7 @@ function BookingDataBox({ booking }) {
               )} breakfast)`}
           </DataItem>
 
-          <p>{ispaid ? "Paid" : "Will pay at property"}</p>
+          <p>{isPaid ? "Paid" : "Will pay at property"}</p>
         </Price>
       </Section>
 
