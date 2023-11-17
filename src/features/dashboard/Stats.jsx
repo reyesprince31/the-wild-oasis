@@ -8,15 +8,15 @@ import Stat from "./Stat";
 import { formatCurrency } from "../../utils/helpers";
 
 function Stats({ bookings, confirmedStays, numDays, cabinCount }) {
-  //   console.log(bookings);
   const numBookings = bookings.length;
+
   const sales = bookings.reduce((acc, curr) => acc + curr.totalPrice, 0);
 
   const checkins = confirmedStays.length;
+
   const occupancy =
     confirmedStays.reduce((acc, curr) => acc + curr.numNights, 0) /
     (numDays * cabinCount);
-  console.log(occupancy);
 
   return (
     <>
