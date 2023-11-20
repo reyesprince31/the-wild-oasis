@@ -154,7 +154,7 @@ function DurationChart({ confirmedStays }) {
           <Pie
             data={data}
             nameKey="duration"
-            datakey="value"
+            dataKey="value"
             innerRadius={82}
             outerRadius={110}
             cx="40%"
