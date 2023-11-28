@@ -35,10 +35,6 @@
 
 We welcome contributions! Please feel free to fork the repository, open issues, and submit pull requests.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ## Contact
 
 For inquiries or support, please contact us at [reyes.prince31@gmail.com](mailto:reyes.prince31@gmail.com).
